@@ -30,13 +30,13 @@ m = flopy.modflow.Modflow(modelname, exe_name = 'mf2005')
 '''Create the Discretization package'''
 #----------------------------------------------------------------------------
 # Assign Discretization variables
-Lx = 100. # Width of the model domain
-Ly = 100. # Height of the model domain
+Lx = 3165901 - 2727053 # Width of the model domain
+Ly = 2800979 - 2528219 # Height of the model domain
 ztop = 0. # Model top elevation
 zbot = -50. # Model bottom elevation
 nlay = 1 # Number of model layers
-nrow = 10 # Number of rows
-ncol = 10 # Number of columns
+nrow = 100 # Number of rows
+ncol = 150 # Number of columns
 dx = Lx/ncol # grid spacing (x-direction)
 dy = Ly/nrow # grid spacing (y-direction)
 nper = 1 #specify number of stress periods
