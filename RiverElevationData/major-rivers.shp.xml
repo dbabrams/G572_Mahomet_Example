@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>U.S. Geological Survey</origin>
+				<pubdate>1980-1986</pubdate>
+				<title Sync="TRUE">major-rivers</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<onlink Sync="TRUE">\\BLACKBERRY\D$\Documents and Settings\cpher\My Documents\gis\projects\ILSAM\Finalized\major-rivers</onlink>
+				<ftname Sync="TRUE">major-rivers</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>This feature class represents major rivers within Illinois.</abstract>
+			<purpose>This feature class is intended to be used when creating hydrologic products describing Illinois.</purpose>
+			<supplinf>U.S.G.S. Digital Line Graph file, Hydrography layer.  1980-1986.</supplinf>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate>1980-1986</caldate>
+				</sngdate>
+			</timeinfo>
+			<current>publication date</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-91.580508</westbc>
+				<eastbc Sync="TRUE">-87.388253</eastbc>
+				<northbc Sync="TRUE">42.514283</northbc>
+				<southbc Sync="TRUE">36.952114</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">2440984.500000</leftbc><rightbc Sync="TRUE">3567400.000000</rightbc><bottombc Sync="TRUE">1440550.750000</bottombc><topbc Sync="TRUE">3450415.000000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>rivers</themekey>
+			</theme>
+			<place>
+				<placekey>Illinois</placekey>
+			</place>
+		</keywords>
+		<accconst>none</accconst>
+		<useconst>Reproduction or redistribution of copyrighted digital data sets
+or products derived therefrom outside of licensee's
+organization or entity is expressly forbidden.  The only
+exception is redistribution to consultants working for the
+licensee, and then only for purposes, related to work for the
+licensee.  Such consultants may not further reproduce or
+redistribute these data sets.  None of these data shall be
+electronically duplicated on magnetic or optical media for
+use by others, in whole or in part, without permission of the
+appropriate custodial division within DNR.
+Any hardcopies utilizing DNR data sets shall clearly indicate
+their source.  If the licensee has modified the data in any way
+they are obligated to describe the types of modifications they
+have performed on the hardcopy map.  Licensee specifically agrees
+not to misrepresent DNR data sets, nor to imply that changes they
+made were approved by DNR.
+These data are not to be used for commercial profit.
+</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Kingsley Allan</cntper>
+					<cntorg>Illinois State Water Survey</cntorg>
+				</cntperp>
+				<cntpos>GIS Manager</cntpos>
+				<cntaddr>
+					<addrtype>Mailing</addrtype>
+					<address>2204 Griffith Drive</address>
+					<city>Champaign</city>
+					<state>IL</state>
+					<postal>61820-7495</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>217-333-0545</cntvoice>
+				<cntfax>217-333-6540</cntfax>
+				<cntemail>k-allan@uiuc.edu</cntemail>
+				<hours>8:00 - 5:00</hours>
+			</cntinfo>
+		</ptcontac>
+		<browse></browse>
+		<native Sync="TRUE">Microsoft Windows 2000 Version 5.1 (Build 2600) Service Pack 1; ESRI ArcCatalog 8.2.0.700</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="major-rivers">
+				<sdtstype Sync="TRUE">String</sdtstype>
+				<ptvctcnt Sync="TRUE">904</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="major-rivers"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polyline</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">904</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm><esriterm Name="arc"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Arc</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">904</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm><sdtsterm Name="arc"><sdtstype Sync="TRUE">Complete chain</sdtstype><ptvctcnt Sync="TRUE">904</ptvctcnt></sdtsterm><esriterm Name="tic"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Tic</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">8</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm><sdtsterm Name="tic"><sdtstype Sync="TRUE">Point</sdtstype><ptvctcnt Sync="TRUE">8</ptvctcnt></sdtsterm><esriterm Name="annotation"><efeatyp Sync="TRUE"></efeatyp><efeageom Sync="TRUE">Annotation</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm><sdtsterm Name="annotation"><sdtstype Sync="TRUE">Label point</sdtstype><ptvctcnt Sync="TRUE">0</ptvctcnt></sdtsterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.004096</absres>
+						<ordres Sync="TRUE">0.004096</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">survey feet</plandu>
+				</planci>
+				<mapproj><mapprojn Sync="TRUE">Lambert Conformal Conic</mapprojn><lambertc><stdparll Sync="TRUE">33.000000</stdparll><stdparll Sync="TRUE">45.000000</stdparll><longcm Sync="TRUE">-89.500000</longcm><latprjo Sync="TRUE">33.000000</latprjo><feast Sync="TRUE">2999994.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></lambertc></mapproj></planar>
+			<geodetic>
+				<horizdn Sync="TRUE">D_Clarke_1866</horizdn>
+				<ellips Sync="TRUE">Clarke 1866</ellips>
+				<semiaxis Sync="TRUE">6378206.400000</semiaxis>
+				<denflat Sync="TRUE">294.978698</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_Clarke_1866</geogcsn><projcsn Sync="TRUE">Clarke_1866_Lambert_Conformal_Conic</projcsn></cordsysn></horizsys>
+		<vertdef>
+			<altsys>
+				<altres>0.000010</altres>
+				<altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="major-rivers">
+			<enttyp>
+				<enttypl Sync="TRUE">major-rivers</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">904</enttypc></enttyp>
+			<attr>
+				<attrlabl Sync="TRUE">FID</attrlabl>
+				<attrdef Sync="TRUE">Internal feature number.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">Shape</attrlabl>
+				<attrdef Sync="TRUE">Feature geometry.</attrdef>
+				<attrdefs Sync="TRUE">ESRI</attrdefs>
+				<attrdomv>
+					<udom Sync="TRUE">Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr>
+				<attrlabl Sync="TRUE">FNODE_</attrlabl>
+				<attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">12</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Area of feature in internal units squared.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Area is always zero for point coverages.  Values are automatically generated.</udom></attrdomv><attalias Sync="TRUE">FNODE_</attalias></attr>
+			<attr>
+				<attrlabl Sync="TRUE">TNODE_</attrlabl>
+				<attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">12</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Perimeter of feature in internal units.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Perimeter is always zero for point coverages.  Values are automatically generated.</udom></attrdomv><attalias Sync="TRUE">TNODE_</attalias></attr>
+			<attr>
+				<attrlabl Sync="TRUE">LPOLY_</attrlabl>
+				<attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv><attalias Sync="TRUE">LPOLY_</attalias></attr>
+			<attr>
+				<attrlabl Sync="TRUE">RPOLY_</attrlabl>
+				<attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">User-defined feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attalias Sync="TRUE">RPOLY_</attalias></attr>
+			<attr>
+				<attrlabl>LENGTH</attrlabl>
+				<attalias Sync="TRUE">LENGTH</attalias><attrtype Sync="TRUE">Float</attrtype><attwidth Sync="TRUE">13</attwidth></attr>
+			<attr>
+				<attrlabl>MAJORRIVS00_</attrlabl>
+				<attalias Sync="TRUE">MAJORRIVS0</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr>
+			<attr>
+				<attrlabl>MAJORRIVS00_ID</attrlabl>
+				<attalias Sync="TRUE">MAJORRIV_1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr>
+			<attr>
+				<attrlabl>CODE</attrlabl>
+				<attalias Sync="TRUE">CODE</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">3</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM_ID</attrlabl>
+				<attalias Sync="TRUE">STREAM_ID</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth></attr>
+			<attr>
+				<attrlabl>MILEAGE_LOWER</attrlabl>
+				<attalias Sync="TRUE">MILEAGE_LO</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">13</attwidth></attr>
+			<attr>
+				<attrlabl>MILEAGE_UPPER</attrlabl>
+				<attalias Sync="TRUE">MILEAGE_UP</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">12</attwidth></attr>
+			<attr>
+				<attrlabl>HYDRO_REACH</attrlabl>
+				<attalias Sync="TRUE">HYDRO_REAC</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">12</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM_ORDER</attrlabl>
+				<attalias Sync="TRUE">STREAM_ORD</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM_SITUATION</attrlabl>
+				<attalias Sync="TRUE">STREAM_SIT</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM_PERIOD</attrlabl>
+				<attalias Sync="TRUE">STREAM_PER</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM_LOW_FLOW</attrlabl>
+				<attalias Sync="TRUE">STREAM_LOW</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>PUBLIC_NAV_WWAY</attrlabl>
+				<attalias Sync="TRUE">PUBLIC_NAV</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM_CHNL_CANL</attrlabl>
+				<attalias Sync="TRUE">STREAM_CHN</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>POTENTIAL_RESVR</attrlabl>
+				<attalias Sync="TRUE">POTENTIAL_</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>STATE_RES_SYS</attrlabl>
+				<attalias Sync="TRUE">STATE_RES_</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">4</attwidth></attr>
+			<attr>
+				<attrlabl>SNA_COUNTY_CODE</attrlabl>
+				<attalias Sync="TRUE">SNA_COUNTY</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">3</attwidth></attr>
+			<attr>
+				<attrlabl>SNA_LETTER_MOD</attrlabl>
+				<attalias Sync="TRUE">SNA_LETTER</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">1</attwidth></attr>
+			<attr>
+				<attrlabl>SNA_NUMBER_NAME</attrlabl>
+				<attalias Sync="TRUE">SNA_NUMBER</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">3</attwidth></attr>
+			<attr>
+				<attrlabl>SPC_FED_RES</attrlabl>
+				<attalias Sync="TRUE">SPC_FED_RE</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">3</attwidth></attr>
+			<attr>
+				<attrlabl>INV_PUB_REC</attrlabl>
+				<attalias Sync="TRUE">INV_PUB_RE</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">5</attwidth></attr>
+			<attr>
+				<attrlabl>MILE_L</attrlabl>
+				<attalias Sync="TRUE">MILE_L</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">6</attwidth></attr>
+			<attr>
+				<attrlabl>MILE_U</attrlabl>
+				<attalias Sync="TRUE">MILE_U</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">6</attwidth></attr>
+			<attr>
+				<attrlabl>STREAM</attrlabl>
+				<attalias Sync="TRUE">STREAM</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">8</attwidth></attr>
+			<attr>
+				<attrlabl>Shape_Length</attrlabl>
+				<attrdef>Length of feature in internal units.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Positive real numbers that are automatically generated.</udom>
+				</attrdomv>
+			</attr>
+		</detailed>
+		<detailed Name="majorrivs00.aat"><enttyp><enttypl Sync="TRUE">majorrivs00.aat</enttypl><enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">904</enttypc></enttyp><attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">FNODE#</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Internal node number for the beginning of an arc (from-node).</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">TNODE#</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Internal node number for the end of an arc (to-node).</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">LPOLY#</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Internal node number for the left polygon.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">RPOLY#</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Internal node number for the right polygon.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">LENGTH</attrlabl><attwidth Sync="TRUE">13</attwidth><atoutwid Sync="TRUE">12</atoutwid><attrtype Sync="TRUE">Float</attrtype><atnumdec Sync="TRUE">11</atnumdec><attrdef Sync="TRUE">Length of feature in internal units.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Positive real numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">MAJORRIVS00#</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">MAJORRIVS00-ID</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype><attrdef Sync="TRUE">User-defined feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs></attr><attr><attrlabl Sync="TRUE">CODE</attrlabl><attwidth Sync="TRUE">3</attwidth><atoutwid Sync="TRUE">3</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STREAM-ID</attrlabl><attwidth Sync="TRUE">9</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">MILEAGE-LOWER</attrlabl><attwidth Sync="TRUE">13</attwidth><atoutwid Sync="TRUE">12</atoutwid><attrtype Sync="TRUE">Number</attrtype><atnumdec Sync="TRUE">2</atnumdec></attr><attr><attrlabl Sync="TRUE">MILEAGE-UPPER</attrlabl><attwidth Sync="TRUE">12</attwidth><atoutwid Sync="TRUE">12</atoutwid><attrtype Sync="TRUE">Number</attrtype><atnumdec Sync="TRUE">2</atnumdec></attr><attr><attrlabl Sync="TRUE">HYDRO-REACH</attrlabl><attwidth Sync="TRUE">12</attwidth><atoutwid Sync="TRUE">12</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STREAM-ORDER</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STREAM-SITUATION</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STREAM-PERIOD</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STREAM-LOW-FLOW</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">PUBLIC-NAV-WWAY</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STREAM-CHNL-CANL</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">POTENTIAL-RESVR</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">STATE-RES-SYS</attrlabl><attwidth Sync="TRUE">4</attwidth><atoutwid Sync="TRUE">4</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">SNA-COUNTY-CODE</attrlabl><attwidth Sync="TRUE">3</attwidth><atoutwid Sync="TRUE">3</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">SNA-LETTER-MOD</attrlabl><attwidth Sync="TRUE">1</attwidth><atoutwid Sync="TRUE">1</atoutwid><attrtype Sync="TRUE">String</attrtype></attr><attr><attrlabl Sync="TRUE">SNA-NUMBER-NAME</attrlabl><attwidth Sync="TRUE">3</attwidth><atoutwid Sync="TRUE">3</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">SPC-FED-RES</attrlabl><attwidth Sync="TRUE">3</attwidth><atoutwid Sync="TRUE">3</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">INV-PUB-REC</attrlabl><attwidth Sync="TRUE">5</attwidth><atoutwid Sync="TRUE">5</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr><attr><attrlabl Sync="TRUE">MILE-L</attrlabl><attwidth Sync="TRUE">6</attwidth><atoutwid Sync="TRUE">6</atoutwid><attrtype Sync="TRUE">Number</attrtype><atnumdec Sync="TRUE">2</atnumdec></attr><attr><attrlabl Sync="TRUE">MILE-U</attrlabl><attwidth Sync="TRUE">6</attwidth><atoutwid Sync="TRUE">6</atoutwid><attrtype Sync="TRUE">Number</attrtype><atnumdec Sync="TRUE">2</atnumdec></attr><attr><attrlabl Sync="TRUE">STREAM</attrlabl><attwidth Sync="TRUE">8</attwidth><atoutwid Sync="TRUE">8</atoutwid><attrtype Sync="TRUE">Number</attrtype></attr></detailed></eainfo>
+	<distinfo>
+		<resdesc>Downloadable Data</resdesc>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>ACCESS2000</formname>
+					<filedec>no compression applied</filedec>
+					<transize Sync="TRUE">0.671</transize><dssize Sync="TRUE">0.671</dssize></digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>\\gisserv_isws\illidata\illinois\surfacewater\majorrivs00</networkr>
+							</networka>
+						</computer>
+						<accinstr>Local area network</accinstr>
+					</onlinopt>
+				</digtopt>
+			</digform>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20030326</metd>
+		<metrd>9/3/02</metrd>
+		<metfrd>as needed</metfrd>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntper>Kathleen J. Brown</cntper>
+					<cntorg>Illinois State Water Survey</cntorg>
+				</cntperp>
+				<cntaddr>
+					<addrtype>Mailing</addrtype>
+					<address>2204 Griffith Drive</address>
+					<city>Champaign</city>
+					<state>IL</state>
+					<postal>61820-7495</postal>
+					<country>USA</country>
+				</cntaddr>
+				<cntvoice>217-333-6778</cntvoice>
+				<cntfax>217-333-6540</cntfax>
+				<cntemail>k-brown3@uiuc.edu</cntemail>
+				<hours>8:00 - 5:00</hours>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metac>None</metac>
+		<metuc>None</metuc>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20210106</CreaDate><CreaTime>11391700</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20030326</SyncDate><SyncTime>16562300</SyncTime><ModDate>20030326</ModDate><ModTime>16562300</ModTime><ArcGISstyle>FGDC CSDGM Metadata</ArcGISstyle><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\ISWS-HADLEY\Users\drhadley\Desktop\WSP_Figure_powerpoint_update\commondata\river_outcrops\major-rivers</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps><copyHistory><copy source="C:\Users\drhadley\Documents\WORK\Modeling\Data\River_Outcrops\major-rivers" dest="\\ISWS-HADLEY\Users\drhadley\Desktop\WSP_Figure_powerpoint_update\commondata\river_outcrops\major-rivers" date="20210106" time="11391700"></copy></copyHistory></DataProperties></Esri><dataqual><lineage><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">D:\DOCUME~1\gisadmin\LOCALS~1\Temp\xml5D.tmp</srcused><date Sync="TRUE">20021209</date><time Sync="TRUE">15515200</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE"></srcused><date Sync="TRUE">20030326</date><time Sync="TRUE">16560800</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">S:\ilrdss\ilsam\major-rivers</srcused><date Sync="TRUE">20040429</date><time Sync="TRUE">14502400</time></procstep></lineage></dataqual><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 2000 Version 5.1 (Build 2600) Service Pack 1; ESRI ArcCatalog 8.2.0.700</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">major-rivers</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><geoBox esriExtentType="native"><westBL Sync="TRUE">2440984.5</westBL><eastBL Sync="TRUE">3567400</eastBL><northBL Sync="TRUE">3450415</northBL><southBL Sync="TRUE">1440550.75</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-91.580508</westBL><eastBL Sync="TRUE">-87.388253</eastBL><northBL Sync="TRUE">42.514283</northBL><southBL Sync="TRUE">36.952114</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\BLACKBERRY\D$\Documents and Settings\cpher\My Documents\gis\projects\ILSAM\Finalized\major-rivers</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">0.671</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">Clarke_1866_Lambert_Conformal_Conic</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="major-rivers"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">904</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20030326</mdDateSt></metadata>
