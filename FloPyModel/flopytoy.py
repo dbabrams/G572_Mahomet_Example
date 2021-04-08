@@ -121,40 +121,6 @@ riv = flopy.modflow.ModflowRiv(model=m, stress_period_data=rivs)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-'''Create a river package'''
-#----------------------------------------------------------------------------
-# https://flopy.readthedocs.io/en/latest/source/flopy.modflow.mfriv.html
-
-#df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/RiverElevationData/majorriverelevations.csv')
-#df['layer'] = 0
-#df['row'] = nrow - np.floor((df['lamy']-ylo)/dy)
-#df['col'] = np.floor((df['lamx']-xlo)/dx)
-#df = df[df['row'] >= 0]
-#df = df[df['col'] >= 0]
-#df = df[df['row'] < nrow]
-#df = df[df['col'] < ncol]
-#df['stage'] = df['VALUE']
-#df['cond'] = 50000.
-#df['rbot'] = df['stage']-0.5
-#df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
-#rivs = {0: df.to_numpy()}
-#
-#riv = flopy.modflow.ModflowRiv(model=m, stress_period_data=rivs)
-#----------------------------------------------------------------------------
-
-
 '''Create the Output Control Package'''
 #----------------------------------------------------------------------------
 #create oc stress period data. 
