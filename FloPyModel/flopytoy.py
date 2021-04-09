@@ -37,13 +37,43 @@ ylo = 2528219
 yhi = 2800979
 Lx = xhi - xlo # Width of the model domain
 Ly = yhi - ylo # Height of the model domain
-ztop = 0. # Model top elevation
-zbot = -50. # Model bottom elevation
 nlay = 1 # Number of model layers
 nrow = 100 # Number of rows
 ncol = 150 # Number of columns
 dx = Lx/ncol # grid spacing (x-direction)
 dy = Ly/nrow # grid spacing (y-direction)
+
+
+df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/elevations/l1_top.csv')
+df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
+df = df[df['row']>=0]
+df = df[df['row']<nrow]
+df['col'] = np.floor((df['lamx']-xlo)/dx)
+df = df[df['col']>=0]
+df = df[df['col']<ncol]
+df['elev'] = df['VALUE']
+df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
+df = df.drop_duplicates(subset=['row', 'col'])
+ztop = np.zeros([nrow,ncol])
+for index, values in df.iterrows():
+    ztop[np.int(values['row']),np.int(values['col'])]=values['elev']
+    
+
+df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/elevations/l1_bot.csv')
+df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
+df = df[df['row']>=0]
+df = df[df['row']<nrow]
+df['col'] = np.floor((df['lamx']-xlo)/dx)
+df = df[df['col']>=0]
+df = df[df['col']<ncol]
+df['elev'] = df['VALUE']
+df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
+df = df.drop_duplicates(subset=['row', 'col'])
+zbot = np.zeros([nrow,ncol])
+for index, values in df.iterrows():
+    zbot[np.int(values['row']),np.int(values['col'])]=values['elev']
+    
+
 nper = 1 #specify number of stress periods
 steady = [True] #specify if stress period is transient or steady-state
 
