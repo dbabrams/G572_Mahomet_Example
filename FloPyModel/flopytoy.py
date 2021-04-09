@@ -72,6 +72,11 @@ df = df.drop_duplicates(subset=['row', 'col'])
 zbot = np.zeros([nrow,ncol])
 for index, values in df.iterrows():
     zbot[np.int(values['row']),np.int(values['col'])]=values['elev']
+
+for idx, x in np.ndenumerate(ztop):
+    if zbot[idx]+10>=x:
+        zbot[idx]= x-10
+        
     
 
 nper = 1 #specify number of stress periods
@@ -86,65 +91,6 @@ dis = flopy.modflow.ModflowDis(model=m, nlay=nlay, nrow=nrow, ncol=ncol,
                                nper=nper, steady=steady)
 #----------------------------------------------------------------------------
 
-
-'''
-#----------------------------------------------------------------------------
-# Assign Discretization variables
-xlo = 2727053
-xhi = 3165901
-ylo = 2528219
-yhi = 2800979
-Lx = xhi - xlo # Width of the model domain
-Ly = yhi - ylo # Height of the model domain
-ztop = 0. # Model top elevation
-
-df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/elevations/l1_top.csv')
-df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
-df = df[df['row']>=0]
-df = df[df['row']<nrow]
-df['col'] = np.floor((df['lamx']-xlo)/dx)
-df = df[df['col']>=0]
-df = df[df['col']<ncol]
-df['elev'] = df['VALUE']
-df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
-df = df.drop_duplicates(subset=['row', 'col'])
-topel = np.zeros((np.int(np.max(df['row'])+1),np.int(np.max(df['col'])+1)))
-for index, values in df.iterrows():
-    topel[np.int(values['row']),np.int(values['col'])] = values['elev']
-#topl1 = df
-
-df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/elevations/l1_bot.csv')
-df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
-df = df[df['row']>=0]
-df = df[df['row']<nrow]
-df['col'] = np.floor((df['lamx']-xlo)/dx)
-df = df[df['col']>=0]
-df = df[df['col']<ncol]
-df['elev'] = df['VALUE']
-df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
-df = df.drop_duplicates(subset=['row', 'col'])
-botel = np.zeros((np.int(np.max(df['row'])+1),np.int(np.max(df['col'])+1)))
-for index, values in df.iterrows():
-    botel[np.int(values['row']),np.int(values['col'])] = values['elev']
-
-
-nlay = 1 # Number of model layers
-nrow = 100 # Number of rows
-ncol = 150 # Number of columns
-dx = Lx/ncol # grid spacing (x-direction)
-dy = Ly/nrow # grid spacing (y-direction)
-nper = 1 #specify number of stress periods
-steady = [True] #specify if stress period is transient or steady-state
-
-# create flopy discretization object
-# length and time are feet (1) and days (4).
-# See https://water.usgs.gov/ogw/modflow/MODFLOW-2005-Guide/index.html?dis.htm 
-dis = flopy.modflow.ModflowDis(model=m, nlay=nlay, nrow=nrow, ncol=ncol, 
-                               delr=dx, delc=dy, top=topel, botm=botel, 
-                               itmuni = 4, lenuni = 1, 
-                               nper=nper, steady=steady)
-#----------------------------------------------------------------------------
-'''
 
 
 '''Create the Basic Package, which contains ibound and starting heads'''
