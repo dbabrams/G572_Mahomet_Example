@@ -57,8 +57,7 @@ dis = flopy.modflow.ModflowDis(model=m, nlay=nlay, nrow=nrow, ncol=ncol,
 #----------------------------------------------------------------------------
 
 
-
-'''Create the Discretization package'''
+'''
 #----------------------------------------------------------------------------
 # Assign Discretization variables
 xlo = 2727053
@@ -115,7 +114,7 @@ dis = flopy.modflow.ModflowDis(model=m, nlay=nlay, nrow=nrow, ncol=ncol,
                                itmuni = 4, lenuni = 1, 
                                nper=nper, steady=steady)
 #----------------------------------------------------------------------------
-
+'''
 
 
 '''Create the Basic Package, which contains ibound and starting heads'''
