@@ -110,28 +110,6 @@ bas = flopy.modflow.ModflowBas(m, ibound=ibound, strt=strt)
 #----------------------------------------------------------------------------
 
 
-
-'''Create the Layer Property Flow Package, which contains information about
-hydruaulic conductivity and other information about how to calculate flow'''
-#----------------------------------------------------------------------------
-hk = 150*np.ones((nlay,nrow,ncol), dtype=np.float32) #define horizontal hydraulic conductivity
-vk = np.ones((nlay,nrow,ncol), dtype=np.float32) #define vertical hydraulic conductivity
-
-#define layer type as convertible (1), must be an integer
-#for more information, see https://water.usgs.gov/ogw/modflow/MODFLOW-2005-Guide/index.html?dis.htm
-laytyp = np.ones((nlay,), dtype=np.int32)
-
-# create the LPF object
-lpf = flopy.modflow.ModflowLpf(model=m, hk=hk, vka=vk, laytyp=laytyp, ipakcb=1)
-#----------------------------------------------------------------------------
-
-
-
-'''Create a recharge package'''
-#----------------------------------------------------------------------------
-rech = flopy.modflow.ModflowRch(model=m,rech = 0.003)
-#----------------------------------------------------------------------------
-
 '''Create a river package'''
 #----------------------------------------------------------------------------
 # https://flopy.readthedocs.io/en/latest/source/flopy.modflow.mfriv.html
@@ -148,12 +126,73 @@ df['stage'] = df['VALUE']
 df['cond'] = 50000.
 df['rbot'] = df['stage'] - .5
 df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
+df_riv = df
 rivs = {0: df.to_numpy()}
 riv = flopy.modflow.ModflowRiv(model=m, stress_period_data=rivs)
 #----------------------------------------------------------------------------
 
 
+'''Create the Layer Property Flow Package, which contains information about
+hydruaulic conductivity and other information about how to calculate flow'''
+#----------------------------------------------------------------------------
+hi = 150.
+lo = 10.
+thresh = 25.
 
+df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/hydraulicconductivity/l9_k.csv')
+df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
+df = df[df['row']>=0]
+df = df[df['row']<nrow]
+df['col'] = np.floor((df['lamx']-xlo)/dx)
+df = df[df['col']>=0]
+df = df[df['col']<ncol]
+df['hk'] = df['VALUE']
+df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
+df = df.drop_duplicates(subset=['row', 'col'])
+hk = hi*np.ones([nrow,ncol])
+for index, values in df.iterrows():
+    if values['hk']<=thresh:
+        hk[np.int(values['row']),np.int(values['col'])]=lo
+for index, values in df_riv.iterrows():
+    hk[np.int(values['row']),np.int(values['col'])]=hi   
+
+
+
+vk = hk/0.1 #define vertical hydraulic conductivity
+
+#define layer type as convertible (1), must be an integer
+#for more information, see https://water.usgs.gov/ogw/modflow/MODFLOW-2005-Guide/index.html?dis.htm
+laytyp = np.zeros((nlay,), dtype=np.int32)
+
+# create the LPF object
+lpf = flopy.modflow.ModflowLpf(model=m, hk=hk, vka=vk, laytyp=laytyp, ipakcb=1)
+#----------------------------------------------------------------------------
+
+
+
+'''Create a recharge package'''
+#----------------------------------------------------------------------------
+hi = 0.003
+lo = .000000001
+
+df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/hydraulicconductivity/l9_k.csv')
+df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
+df = df[df['row']>=0]
+df = df[df['row']<nrow]
+df['col'] = np.floor((df['lamx']-xlo)/dx)
+df = df[df['col']>=0]
+df = df[df['col']<ncol]
+df['rchg'] = df['VALUE']
+df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
+df = df.drop_duplicates(subset=['row', 'col'])
+rchg = hi*np.ones([nrow,ncol])
+for index, values in df.iterrows():
+    if values['rchg']<=thresh:
+        rchg[np.int(values['row']),np.int(values['col'])]=lo
+
+
+rech = flopy.modflow.ModflowRch(model=m,rech = rchg)
+#----------------------------------------------------------------------------
 
 
 '''Create the Output Control Package'''
