@@ -28,6 +28,7 @@ m = flopy.modflow.Modflow(modelname, exe_name = 'mf2005')
 
 
 
+#%% 
 '''Create the Discretization package'''
 #----------------------------------------------------------------------------
 # Assign Discretization variables
@@ -72,13 +73,11 @@ df = df.drop_duplicates(subset=['row', 'col'])
 zbot = np.zeros([nrow,ncol])
 for index, values in df.iterrows():
     zbot[np.int(values['row']),np.int(values['col'])]=values['elev']
-
+    
 for idx, x in np.ndenumerate(ztop):
     if zbot[idx]+10>=x:
         zbot[idx]= x-10
         
-    
-
 nper = 1 #specify number of stress periods
 steady = [True] #specify if stress period is transient or steady-state
 
@@ -91,6 +90,7 @@ dis = flopy.modflow.ModflowDis(model=m, nlay=nlay, nrow=nrow, ncol=ncol,
                                nper=nper, steady=steady)
 #----------------------------------------------------------------------------
 
+#%%
 
 
 '''Create the Basic Package, which contains ibound and starting heads'''
@@ -114,7 +114,7 @@ bas = flopy.modflow.ModflowBas(m, ibound=ibound, strt=strt)
 '''Create the Layer Property Flow Package, which contains information about
 hydruaulic conductivity and other information about how to calculate flow'''
 #----------------------------------------------------------------------------
-hk = np.ones((nlay,nrow,ncol), dtype=np.float32) #define horizontal hydraulic conductivity
+hk = 150*np.ones((nlay,nrow,ncol), dtype=np.float32) #define horizontal hydraulic conductivity
 vk = np.ones((nlay,nrow,ncol), dtype=np.float32) #define vertical hydraulic conductivity
 
 #define layer type as convertible (1), must be an integer
@@ -129,7 +129,7 @@ lpf = flopy.modflow.ModflowLpf(model=m, hk=hk, vka=vk, laytyp=laytyp, ipakcb=1)
 
 '''Create a recharge package'''
 #----------------------------------------------------------------------------
-
+rech = flopy.modflow.ModflowRch(model=m,rech = 0.003)
 #----------------------------------------------------------------------------
 
 '''Create a river package'''
