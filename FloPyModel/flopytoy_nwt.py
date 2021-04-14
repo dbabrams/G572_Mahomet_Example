@@ -24,7 +24,10 @@ import pandas as pd
 #----------------------------------------------------------------------------
 modelname = "my_model2"
 m = flopy.modflow.Modflow(modelname, exe_name = 'mf2005')
+#m = flopy.modflow.Modflow(modelname=modelname, exe_name='MODFLOW-NWT_64', version='mfnwt')
+
 #----------------------------------------------------------------------------
+
 
 
 
@@ -44,6 +47,22 @@ ncol = 150 # Number of columns
 dx = Lx/ncol # grid spacing (x-direction)
 dy = Ly/nrow # grid spacing (y-direction)
 
+# river package definition
+df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/RiverElevationData/majorriverelevations.csv')
+df['lay'] = 0
+df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
+df = df[df['row']>=0]
+df = df[df['row']<nrow]
+df['col'] = np.floor((df['lamx']-xlo)/dx)
+df = df[df['col']>=0]
+df = df[df['col']<ncol]
+df['stage'] = df['VALUE']
+df['cond'] = 50000.
+df['rbot'] = df['stage'] - 5.
+df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
+df = df.drop_duplicates(subset=['row', 'col'])
+df_riv = df
+
 
 df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/elevations/l1_top.csv')
 df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
@@ -59,6 +78,9 @@ ztop = np.zeros([nrow,ncol])
 for index, values in df.iterrows():
     ztop[np.int(values['row']),np.int(values['col'])]=values['elev']
     
+for index, values in df_riv.iterrows():
+    ztop[np.int(values['row']),np.int(values['col'])]=values['stage']
+    
 
 df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/elevations/l1_bot.csv')
 df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
@@ -73,10 +95,13 @@ df = df.drop_duplicates(subset=['row', 'col'])
 zbot = np.zeros([nrow,ncol])
 for index, values in df.iterrows():
     zbot[np.int(values['row']),np.int(values['col'])]=values['elev']
-    
+
 for idx, x in np.ndenumerate(ztop):
     if zbot[idx]+10>=x:
         zbot[idx]= x-10
+        
+#for index, values in df_riv.iterrows():
+#    zbot[np.int(values['row']),np.int(values['col'])]=values['stage']-50        
         
 nper = 1 #specify number of stress periods
 steady = [True] #specify if stress period is transient or steady-state
@@ -114,21 +139,7 @@ bas = flopy.modflow.ModflowBas(m, ibound=ibound, strt=10000.)
 '''Create a river package'''
 #----------------------------------------------------------------------------
 # https://flopy.readthedocs.io/en/latest/source/flopy.modflow.mfriv.html
-
-df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/RiverElevationData/majorriverelevations.csv')
-df['lay'] = 0
-df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
-df = df[df['row']>=0]
-df = df[df['row']<nrow]
-df['col'] = np.floor((df['lamx']-xlo)/dx)
-df = df[df['col']>=0]
-df = df[df['col']<ncol]
-df['stage'] = df['VALUE']
-df['cond'] = 50000.
-df['rbot'] = df['stage'] - 5.
-df = df.drop(['wkt_geom','VALUE','lamx','lamy'], axis=1)
-df_riv = df
-rivs = {0: df.to_numpy()}
+rivs = {0: df_riv.to_numpy()}
 riv = flopy.modflow.ModflowRiv(model=m, stress_period_data=rivs)
 #----------------------------------------------------------------------------
 
@@ -181,7 +192,7 @@ for index, values in df.iterrows():
     if values['hk']<=thresh:
         rn = np.int(values['row'])
         cn = np.int(values['col'])
-        newdata[i] = [0,rn,cn,ztop[rn,cn],500.]
+        newdata[i] = [0,rn,cn,ztop[rn,cn],100.]
         i = i+1
         
 df_drn = pd.DataFrame.from_dict(newdata, orient='index')
@@ -228,7 +239,8 @@ oc = flopy.modflow.ModflowOc(model=m, stress_period_data=spd, compact=True)
 '''Create the PCG Solver Object'''
 #----------------------------------------------------------------------------
 # for the time being, we will use default settings with the solver
-pcg = flopy.modflow.ModflowPcg(model=m,mxiter = 600, iter1 = 50, hclose = 1e-9, rclose = 1e-9, damp = 1.0, relax = 1.0)
+#nwt = flopy.modflow.ModflowNwt(model=m)
+pcg = flopy.modflow.ModflowPcg(model=m)
 #----------------------------------------------------------------------------
 
 
