@@ -38,8 +38,8 @@ yhi = 2800979
 Lx = xhi - xlo # Width of the model domain
 Ly = yhi - ylo # Height of the model domain
 nlay = 2 # Number of model layers
-nrow = 50 # Number of rows
-ncol = 75 # Number of columns
+nrow = 100 # Number of rows
+ncol = 150 # Number of columns
 dx = Lx/ncol # grid spacing (x-direction)
 dy = Ly/nrow # grid spacing (y-direction)
 
