@@ -230,8 +230,8 @@ drn = flopy.modflow.ModflowDrn(model=m, stress_period_data=drns)
 
 '''Create a recharge package'''
 #----------------------------------------------------------------------------
-hi = 0.003
-lo = 0.003
+hi = 0.06
+lo = 0.06
 df = pd.read_csv('https://raw.githubusercontent.com/dbabrams/G572_Mahomet_Example/develop_abrams/hydraulicconductivity/l1_k.csv')
 df['row'] = nrow- np.floor((df['lamy']-ylo)/dy)-1
 df = df[df['row']>=0]
