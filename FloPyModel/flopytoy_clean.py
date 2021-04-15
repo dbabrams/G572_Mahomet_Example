@@ -328,7 +328,7 @@ plt.legend(handles=[mp.patches.Patch(color='blue',label='Const. Head',ec='black'
 
 '''Plot results'''
 #----------------------------------------------------------------------------
-layviz = 0
+layviz = 1
 
 plt.figure(figsize=(10,10)) #create 10 x 10 figure
 modelmap = flopy.plot.map.PlotMapView(model=m, layer=layviz) #use plotmapview to attach plot to model
